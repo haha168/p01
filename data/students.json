@@ -1,0 +1,31 @@
+{
+  "students": [
+    {
+      "id": "A123456789",
+      "password": "demo1234",
+      "name": "王小明",
+      "className": "高一忠班",
+      "advisor": "陳美玲老師",
+      "grade": "高一",
+      "studentNo": "114001"
+    },
+    {
+      "id": "B234567890",
+      "password": "apple2026",
+      "name": "林雅婷",
+      "className": "高二孝班",
+      "advisor": "張立偉老師",
+      "grade": "高二",
+      "studentNo": "113015"
+    },
+    {
+      "id": "C345678901",
+      "password": "class888",
+      "name": "陳冠宇",
+      "className": "高三仁班",
+      "advisor": "李欣怡老師",
+      "grade": "高三",
+      "studentNo": "112008"
+    }
+  ]
+}

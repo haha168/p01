@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="編班查詢系統 — 查詢姓名、班級與導師資訊">
+  <title>編班查詢</title>
+  <!-- 子頁面正式上線時可由主框架載入套件；此為獨立演示頁，僅引入本專案樣式與腳本 -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- 柔和動態背景，營造 Apple 氛圍層次 -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__orb ambient__orb--1"></div>
+    <div class="ambient__orb ambient__orb--2"></div>
+    <div class="ambient__orb ambient__orb--3"></div>
+  </div>
+
+  <main class="app">
+    <!-- ========== 登入畫面 ========== -->
+    <section id="view-login" class="view" aria-label="登入">
+      <header class="brand">
+        <!-- 品牌標記：第一視窗的英雄級品牌訊號 -->
+        <div class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/>
+            <path d="M14 3v4a1 1 0 0 0 1 1h4"/>
+            <path d="M8 13h8M8 17h5"/>
+          </svg>
+        </div>
+        <h1 class="brand__name">編班查詢</h1>
+        <p class="brand__tagline">登入後即可查看班級與導師資訊</p>
+      </header>
+
+      <div class="panel">
+        <!-- 錯誤提示區 -->
+        <div id="login-alert" class="alert alert--error" role="alert" aria-live="polite">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 8v5M12 16h.01"/>
+          </svg>
+          <span id="login-alert-text"></span>
+        </div>
+
+        <form id="login-form" autocomplete="on" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="input-id">身分證字號</label>
+            <input
+              class="form-input"
+              type="text"
+              id="input-id"
+              name="id"
+              inputmode="text"
+              maxlength="10"
+              placeholder="請輸入身分證字號"
+              autocomplete="username"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="input-password">密碼</label>
+            <input
+              class="form-input"
+              type="password"
+              id="input-password"
+              name="password"
+              placeholder="請輸入密碼"
+              autocomplete="current-password"
+              required
+            >
+          </div>
+
+          <button type="submit" class="btn btn--primary" id="btn-login">
+            <span class="btn__spinner" aria-hidden="true"></span>
+            <span class="btn__label">登入</span>
+          </button>
+        </form>
+
+        <p class="hint">
+          示範帳號：<code>A123456789</code> / <code>demo1234</code>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== 查詢結果畫面 ========== -->
+    <section id="view-result" class="view" aria-label="編班資訊" hidden>
+      <div class="panel panel--result">
+        <header class="result-header">
+          <div class="result-header__top">
+            <span class="result-header__eyebrow">編班查詢</span>
+            <button type="button" class="btn btn--ghost btn--ghost-light" id="btn-logout">登出</button>
+          </div>
+          <!-- 姓名作為結果畫面主視覺焦點 -->
+          <h2 class="result-header__name" id="result-name">—</h2>
+          <p class="result-header__sub" id="result-grade">歡迎回來</p>
+        </header>
+
+        <div class="result-body">
+          <!-- 班級 -->
+          <div class="info-row">
+            <div class="info-row__icon info-row__icon--class" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/>
+                <path d="M9 22V12h6v10"/>
+              </svg>
+            </div>
+            <div class="info-row__meta">
+              <div class="info-row__label">班級</div>
+              <div class="info-row__value" id="result-class">—</div>
+            </div>
+          </div>
+
+          <!-- 導師 -->
+          <div class="info-row">
+            <div class="info-row__icon info-row__icon--advisor" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/>
+              </svg>
+            </div>
+            <div class="info-row__meta">
+              <div class="info-row__label">導師</div>
+              <div class="info-row__value" id="result-advisor">—</div>
+            </div>
+          </div>
+
+          <!-- 學號 -->
+          <div class="info-row">
+            <div class="info-row__icon info-row__icon--id" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M7 10h4M7 14h10"/>
+              </svg>
+            </div>
+            <div class="info-row__meta">
+              <div class="info-row__label">學號</div>
+              <div class="info-row__value" id="result-student-no">—</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-footer">
+          <p style="font-size:0.8125rem;color:#86868b;">資料僅供編班確認使用</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
