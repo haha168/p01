@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>秋天為什麼會有「萬鷺朝鳳」？黃頭鷺科普</title>
+<style>
+  @font-face { font-family: "Sans"; src: url("fonts/sans-400.woff2") format("woff2"); font-weight: 400; font-display: block; }
+  @font-face { font-family: "Sans"; src: url("fonts/sans-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+  @font-face { font-family: "Serif"; src: url("fonts/serif-600.woff2") format("woff2"); font-weight: 600; font-display: block; }
+  @font-face { font-family: "Serif"; src: url("fonts/serif-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body {
+    font-family: "Sans", "Noto Sans TC", sans-serif;
+    color: #1d1a17;
+    font-size: 10.4pt;
+    line-height: 1.58;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    page-break-after: always;
+    break-after: page;
+    overflow: hidden;
+    position: relative;
+    padding: 12mm 13mm 11mm;
+    display: flex;
+    flex-direction: column;
+    background: #f6f2ea;
+  }
+  .page:last-child { page-break-after: auto; }
+  h1, h2, h3 { font-family: "Serif", serif; font-weight: 650; line-height: 1.25; }
+  p { margin: 0 0 2.2mm; }
+  .kicker {
+    font-size: 8.5pt;
+    letter-spacing: 0.14em;
+    color: #b86a22;
+    font-weight: 700;
+    margin-bottom: 1.4mm;
+  }
+  h2 { font-size: 18.5pt; margin-bottom: 2.4mm; }
+  .lead { font-size: 11.2pt; line-height: 1.55; }
+  .muted { color: #5e564c; }
+  .foot {
+    margin-top: auto;
+    padding-top: 2.5mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+    color: #7a7166;
+    border-top: 0.3mm solid rgba(29,26,23,0.12);
+  }
+  img { display: block; width: 100%; object-fit: cover; }
+  figcaption { font-size: 7.6pt; line-height: 1.4; color: #6b6258; margin-top: 1.2mm; }
+
+  /* 封面 */
+  .cover {
+    background: #14342c;
+    color: #f6f1e7;
+    padding: 0;
+  }
+  .cover-inner { padding: 13mm 13mm 0; }
+  .cover .eyebrow { letter-spacing: 0.18em; font-size: 8.5pt; color: #e7c27a; font-weight: 700; }
+  .cover h1 { font-size: 26pt; margin: 3mm 0 2mm; color: #f7f3ea; }
+  .cover .sub { font-size: 12pt; color: rgba(247,243,234,0.88); margin-bottom: 4mm; }
+  .hero { height: 118mm; }
+  .hero img { height: 118mm; object-position: center 28%; }
+  .goals {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5mm;
+    padding: 5mm 13mm 0;
+  }
+  .goal {
+    background: rgba(255,255,255,0.08);
+    border-radius: 2.5mm;
+    padding: 3mm 3.2mm 2.8mm;
+    min-height: 28mm;
+  }
+  .goal b { display: block; color: #e7c27a; font-size: 8pt; letter-spacing: 0.08em; margin-bottom: 1mm; }
+  .goal span { font-size: 9.4pt; line-height: 1.45; }
+  .cover-foot {
+    margin-top: auto;
+    padding: 4mm 13mm 8mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+    color: rgba(247,243,234,0.7);
+  }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .card {
+    background: #fffdf8;
+    border: 0.3mm solid rgba(29,26,23,0.08);
+    border-radius: 3mm;
+    overflow: hidden;
+  }
+  .card .txt { padding: 2.6mm 3.2mm 3mm; }
+  .card h3 { font-size: 12pt; margin-bottom: 1mm; }
+  .tag {
+    display: inline-block;
+    font-size: 7.6pt;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    background: #f6e2c8;
+    color: #8a4e12;
+    border-radius: 99px;
+    padding: 0.4mm 2mm;
+    margin-bottom: 1.2mm;
+  }
+  .tag.green { background: #e3f0e8; color: #1e4a3c; }
+  .tag.blue { background: #dceaf1; color: #1a4554; }
+
+  .note {
+    background: #efe4d2;
+    border-radius: 2.5mm;
+    padding: 2.8mm 3.4mm;
+    margin: 2.5mm 0;
+  }
+  .note strong { display: block; margin-bottom: 0.6mm; }
+  .call {
+    border-left: 1.1mm solid #e0a04a;
+    padding: 0.4mm 0 0.4mm 3mm;
+    font-family: "Serif", serif;
+    font-size: 12.5pt;
+    line-height: 1.4;
+    margin: 2mm 0 3mm;
+  }
+
+  table { width: 100%; border-collapse: collapse; background: #fffdf8; border-radius: 2mm; overflow: hidden; }
+  th, td { text-align: left; vertical-align: top; padding: 2mm 2.4mm; border-bottom: 0.25mm solid #eadfce; font-size: 9.6pt; }
+  th { background: #1e4a3c; color: #f6f1e7; font-weight: 700; font-size: 9pt; }
+  tr:last-child td { border-bottom: 0; }
+
+  .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2mm; }
+  .step {
+    background: #fffdf8;
+    border-radius: 2.4mm;
+    padding: 2.4mm 2.8mm;
+    display: grid;
+    grid-template-columns: 7mm 1fr;
+    gap: 1.6mm;
+  }
+  .num {
+    width: 6.2mm; height: 6.2mm; border-radius: 99px;
+    background: #1e4a3c; color: #f6f1e7;
+    font-size: 8.5pt; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .checks { list-style: none; }
+  .checks li {
+    background: #fffdf8;
+    border-radius: 2mm;
+    padding: 1.6mm 2.4mm 1.6mm 7mm;
+    margin-bottom: 1.4mm;
+    position: relative;
+    font-size: 9.8pt;
+  }
+  .checks li::before {
+    content: "";
+    position: absolute;
+    left: 2.4mm; top: 2.3mm;
+    width: 2.8mm; height: 2.8mm;
+    border: 0.4mm solid #1e4a3c;
+    border-radius: 0.6mm;
+  }
+  .warn {
+    background: #1e4a3c;
+    color: #f6f1e7;
+    border-radius: 3mm;
+    padding: 3.2mm 3.6mm;
+  }
+  .warn h3 { color: #e7c27a; font-size: 12pt; margin-bottom: 1.2mm; }
+  .q { margin-bottom: 2.4mm; }
+  .q b { color: #1e4a3c; }
+  .ans {
+    background: #fffdf8;
+    border-radius: 2.5mm;
+    padding: 2.6mm 3.2mm;
+    font-size: 9.4pt;
+  }
+  .ans p { margin-bottom: 1.3mm; }
+  .src { font-size: 8pt; line-height: 1.45; color: #5c554c; }
+  .src li { margin-left: 4mm; margin-bottom: 1mm; }
+  .svgbox { background: #e7f2ef; border-radius: 3mm; padding: 2mm; }
+  .compare {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.5mm;
+    align-items: stretch;
+  }
+</style>
+</head>
+<body>
+
+<!-- 1 封面 -->
+<section class="page cover">
+  <div class="cover-inner">
+    <p class="eyebrow">國中自然 · 科普讀本</p>
+    <h1>秋天為什麼會有<br>「萬鷺朝鳳」？</h1>
+    <p class="sub">先認識黃頭鷺。你看到的成群白鳥，很可能就是牠。</p>
+  </div>
+  <div class="hero">
+    <img src="images/flock.jpg" alt="一群黃頭鷺在水面上空飛行">
+  </div>
+  <div class="goals">
+    <div class="goal"><b>01 認得出</b><span>非繁殖季全身大致白色；繁殖季頭、頸、胸、背會帶橙黃。</span></div>
+    <div class="goal"><b>02 說得出</b><span>牠跟牛、跟耕耘機，是為了抓住被驚起的昆蟲。</span></div>
+    <div class="goal"><b>03 想得清</b><span>太興的山谷氣流讓南遷鳥群更容易被看見。群飛本身還不能確認每一群都是黃頭鷺。</span></div>
+  </div>
+  <div class="cover-foot">
+    <span>照片記錄的是黃頭鷺群飛。嘉義太興的「萬鷺朝鳳」，是同一類鳥在山谷裡的秋季景象。</span>
+    <span>1 / 8</span>
+  </div>
+</section>
+
+<!-- 2 認識 -->
+<section class="page">
+  <p class="kicker">01 · 先認識牠</p>
+  <h2>名字裡有「鷺」，生活卻常在草地</h2>
+  <p class="lead">黃頭鷺屬於鷺科，又叫牛背鷺。很多人心中的白鷺，是站在水邊等魚的那種。黃頭鷺更常在草地、農田、牧場和開闊地走路找食物。</p>
+  <div class="grid2" style="margin-top:2mm">
+    <figure class="card">
+      <img src="images/grass.jpg" alt="非繁殖季、全身偏白的黃頭鷺站在草地" style="height:62mm; object-position:center 40%">
+      <figcaption class="txt" style="padding-top:0">非繁殖季：身體大致是白的，遠看很容易被叫成白鷺鷥。印度西孟加拉。Tisha Mukherjee／CC BY-SA 4.0</figcaption>
+    </figure>
+    <figure class="card">
+      <img src="images/breed.jpg" alt="繁殖季頭頸和背部帶橙黃色飾羽的黃頭鷺" style="height:62mm; object-position:center 20%">
+      <figcaption class="txt" style="padding-top:0">繁殖季：頭、頸、喉、上胸和背部長出橙黃色羽毛，嘴也偏橙黃。塞浦路斯。Charles J. Sharp／CC BY-SA 4.0</figcaption>
+    </figure>
+  </div>
+  <div class="note">
+    <strong>一張身分證</strong>
+    中文名：黃頭鷺。別名：牛背鷺。學名多用 <i>Bubulcus ibis</i>。亞洲族群有時被另分成東方黃頭鷺。分類名稱會隨研究更新，你在野外看到的仍是同一類鳥。體長大約 46 到 56 公分。
+  </div>
+  <p>牠吃的主要是昆蟲和小型動物，例如蚱蜢、蟋蟀、飛蟲，也會吃蚯蚓、蛙，以及其他小型脊椎動物。所以你在稻田、旱田看到「白鷺」，先別急著認定牠是來捕魚的。</p>
+  <div class="foot"><span>黃頭鷺科普 · 給國中</span><span>2</span></div>
+</section>
+
+<!-- 3 辨認 -->
+<section class="page">
+  <p class="kicker">02 · 怎麼辨認</p>
+  <h2>飛行時，先看脖子</h2>
+  <div class="compare">
+    <figure>
+      <img src="images/flight.jpg" alt="黃頭鷺飛行，脖子縮起" style="height:58mm; border-radius:3mm; object-position:center 45%">
+      <figcaption>黃頭鷺飛行時通常把脖子縮起來，像一個「S」。夏威夷考艾島。ImagePerson／CC BY 4.0</figcaption>
+    </figure>
+    <div class="svgbox">
+      <svg viewBox="0 0 220 150" width="100%" height="52mm" role="img" aria-label="鷺縮頸與鶴伸頸的比較">
+        <text x="8" y="16" font-size="11" font-family="Sans" fill="#1e4a3c" font-weight="700">鷺：脖子縮起</text>
+        <path d="M28 78c18-8 22-28 18-36 8 10 6 24-2 30 16-2 34 6 48 18-10 6-22 8-34 6" fill="none" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+        <path d="M78 92c22 4 40 2 58-8" fill="none" stroke="#1d1a17" stroke-width="3"/>
+        <circle cx="40" cy="40" r="5" fill="#e0a04a"/>
+        <text x="118" y="16" font-size="11" font-family="Sans" fill="#8a4e12" font-weight="700">鶴：脖子伸直</text>
+        <path d="M132 96 L150 70 L168 40" fill="none" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="172" cy="34" r="5" fill="#1d1a17"/>
+        <path d="M150 78c20 2 36 0 52-6" fill="none" stroke="#1d1a17" stroke-width="3"/>
+        <text x="8" y="138" font-size="9" font-family="Sans" fill="#5e564c">示意。看脖子，比只看「是不是白色」可靠。</text>
+      </svg>
+    </div>
+  </div>
+  <div class="grid2" style="margin-top:3mm">
+    <div class="card">
+      <img src="images/little.jpg" alt="小白鷺在岸邊水潭活動" style="height:42mm; object-position:center 40%">
+      <div class="txt">
+        <span class="tag blue">容易認錯</span>
+        <h3>小白鷺常在水邊</h3>
+        <p>小白鷺嘴多是黑的，腳趾偏黃，較常在水邊找魚。黃頭鷺嘴在繁殖季偏橙黃，而且更常走上草地。南非。Alandmanson／CC BY-SA 4.0</p>
+      </div>
+    </div>
+    <div class="card" style="padding:3.2mm 3.4mm">
+      <span class="tag">野外四問</span>
+      <h3>先問自己</h3>
+      <p>1. 現在是繁殖季，還是非繁殖季？</p>
+      <p>2. 頭、頸、胸、背有沒有橙黃羽？</p>
+      <p>3. 飛起來時，脖子是縮著還是伸直？</p>
+      <p>4. 牠是在乾地走路，還是在水邊等魚？</p>
+      <p class="muted" style="margin:0">只看到遠方一群白鳥，先記成「白色鷺科鳥類」。桃園、三峽一帶也可能看見黃頭鷺移動，但要看清羽色、嘴腳，或留下照片，才能確認那一群。</p>
+    </div>
+  </div>
+  <div class="foot"><span>黃頭鷺科普 · 給國中</span><span>3</span></div>
+</section>
+
+<!-- 4 覓食 -->
+<section class="page">
+  <p class="kicker">03 · 找食物</p>
+  <h2>跟著牛，也跟著耕耘機</h2>
+  <figure>
+    <img src="images/cattle.jpg" alt="黃頭鷺走在牛群附近的草地" style="height:78mm; border-radius:3mm; object-position:center 60%">
+    <figcaption>法國卡馬格：黃頭鷺走在牛附近。臺灣的黃頭鷺也會這樣，或改跟在耕耘機後面。Giles Laurent／CC BY-SA 4.0</figcaption>
+  </figure>
+  <p style="margin-top:3mm">牛走過草地，會把昆蟲驚起來。耕耘機翻土，會把土裡的昆蟲、蚯蚓翻出來。黃頭鷺跟在旁邊，找食物的效率就比較高。過去牠甚至會站上牛背，所以有了「牛背鷺」這個名字。</p>
+  <div class="call">牠主要不是為了「幫牛除蟲」。比較準的說法是：牠會利用大型動物或農耕活動，把獵物驚出來。</div>
+  <div class="grid2">
+    <div class="card" style="padding:3mm 3.4mm">
+      <span class="tag green">牠在吃什麼</span>
+      <h3>地面上的小動物</h3>
+      <p>蚱蜢、蟋蟀、飛蟲、蚯蚓、蛙，以及其他小型脊椎動物。覓食時會快走、小跑、停下來看，也會跳起來啄飛蟲。</p>
+    </div>
+    <div class="card" style="padding:3mm 3.4mm">
+      <span class="tag">和多數鷺不同</span>
+      <h3>乾地是牠的餐桌</h3>
+      <p>許多鷺科鳥類以魚為主，所以你在溪邊、海邊更容易遇到牠們。黃頭鷺則常出現在平地到中海拔的田、草原、牧場，清晨和黃昏也會成群往返覓食區與夜棲地。</p>
+    </div>
+  </div>
+  <div class="foot"><span>黃頭鷺科普 · 給國中</span><span>4</span></div>
+</section>
+
+<!-- 5 一年 -->
+<section class="page">
+  <p class="kicker">04 · 一年的節奏</p>
+  <h2>不是所有黃頭鷺同一天離開</h2>
+  <p>農業部鳥類資料指出：黃頭鷺在臺灣全年都可能見到，族群裡有夏候鳥、冬候鳥和過境個體。夏候鳥大約 9 月離臺南遷，隔年 3 月左右再回來繁殖。至於是不是有一部分全年留在臺灣，還需要更多研究。</p>
+  <table>
+    <thead><tr><th style="width:34mm">時間</th><th>常見狀況</th></tr></thead>
+    <tbody>
+      <tr><td>春季</td><td>一部分個體回到臺灣北部或其他繁殖地。</td></tr>
+      <tr><td>春、夏季</td><td>繁殖、育雛。這時較容易看見橙黃色繁殖羽。</td></tr>
+      <tr><td>8 月下旬到 10 月中旬</td><td>秋季南遷。大型群飛最容易出現在這段時間。</td></tr>
+      <tr><td>秋、冬季</td><td>有些往臺灣南部移動，有些繼續前往東南亞等較溫暖的地區。北方來的冬候鳥，也可能這時出現在臺灣。</td></tr>
+    </tbody>
+  </table>
+  <div class="grid2" style="margin-top:3.5mm">
+    <div class="card" style="padding:3mm 3.4mm">
+      <h3>三個詞</h3>
+      <p><b>夏候鳥</b>：春夏來繁殖，秋天往南。</p>
+      <p><b>冬候鳥</b>：秋天從更北方來過冬。</p>
+      <p style="margin:0"><b>過境</b>：路經這裡，不是全程都留下。</p>
+    </div>
+    <div class="note" style="margin:0">
+      <strong>讀資料時要留一句話</strong>
+      「秋天看得到南遷」很常見。這不代表臺灣每一隻黃頭鷺都在同一天、沿同一條路離開。看到一群鳥往南飛，是線索，不是全部個體的時刻表。
+    </div>
+  </div>
+  <p style="margin-top:3mm">鳥友多年觀察，曾記錄鳥群由北往南，經過水庫、溪谷，其中包括雲林樟湖一帶，再到嘉義梅山。這些是觀察整理，不是每隻鳥都戴著追蹤器走出的固定航線。</p>
+  <div class="svgbox">
+    <svg viewBox="0 0 520 78" width="100%" height="28mm" role="img" aria-label="由北往南的大致移動方向">
+      <line x1="36" y1="28" x2="490" y2="28" stroke="#1e4a3c" stroke-width="2"/>
+      <polygon points="490,28 478,22 478,34" fill="#1e4a3c"/>
+      <circle cx="70" cy="28" r="5" fill="#e0a04a"/>
+      <circle cx="210" cy="28" r="5" fill="#e0a04a"/>
+      <circle cx="340" cy="28" r="5" fill="#e0a04a"/>
+      <circle cx="460" cy="28" r="5" fill="#1e4a3c"/>
+      <text x="70" y="52" text-anchor="middle" font-size="11" font-family="Sans" fill="#1d1a17">桃園、三峽一帶</text>
+      <text x="70" y="66" text-anchor="middle" font-size="9" font-family="Sans" fill="#5e564c">也可能看見移動</text>
+      <text x="210" y="52" text-anchor="middle" font-size="11" font-family="Sans" fill="#1d1a17">沿山線、溪谷</text>
+      <text x="210" y="66" text-anchor="middle" font-size="9" font-family="Sans" fill="#5e564c">例如樟湖一帶</text>
+      <text x="340" y="52" text-anchor="middle" font-size="11" font-family="Sans" fill="#1d1a17">梅山太興</text>
+      <text x="340" y="66" text-anchor="middle" font-size="9" font-family="Sans" fill="#5e564c">萬鷺朝鳳</text>
+      <text x="460" y="52" text-anchor="middle" font-size="11" font-family="Sans" fill="#1d1a17">再往南</text>
+      <text x="460" y="66" text-anchor="middle" font-size="9" font-family="Sans" fill="#5e564c">南部或東南亞</text>
+    </svg>
+  </div>
+  <div class="foot"><span>黃頭鷺科普 · 給國中</span><span>5</span></div>
+</section>
+
+<!-- 6 萬鷺朝鳳 -->
+<section class="page">
+  <p class="kicker">05 · 萬鷺朝鳳</p>
+  <h2>山谷裡有一段看不見的電扶梯</h2>
+  <p>嘉義縣梅山鄉太興村的生毛樹溪谷，每年秋天常出現這個景象。鳥群飛進溪谷、盤旋，再越過山頭。數量很多時，遠看像一條白色長帶在山谷裡翻轉。當地把生毛樹溪一帶稱作「鳳凰穴」，於是有了「萬鷺朝鳳」這個名字。</p>
+  <div class="note"><strong>這是地方對景象的稱呼，加上地方傳說，不是鳥類學的正式名稱。</strong>賞鳥地點常被說成「阿里山」。更精確地說，是梅山鄉太興村，在阿里山風景區的旅遊範圍附近，不是阿里山森林遊樂區的高山核心。</div>
+  <div class="svgbox" style="margin-bottom:2.5mm">
+    <svg viewBox="0 0 640 168" width="100%" height="46mm" role="img" aria-label="鳥群利用山谷上升氣流盤旋後越過山稜">
+      <rect width="640" height="168" fill="#e7f2ef"/>
+      <circle cx="78" cy="36" r="14" fill="#e7c27a"/>
+      <path d="M0 150 L120 78 L210 132 L300 96 L390 140 L520 70 L640 118 L640 168 L0 168 Z" fill="#1e4a3c"/>
+      <path d="M150 120 C170 70 210 60 230 90" fill="none" stroke="#e0a04a" stroke-width="2" stroke-dasharray="4 3"/>
+      <path d="M200 100 C230 48 270 46 300 86" fill="none" stroke="#e0a04a" stroke-width="2" stroke-dasharray="4 3"/>
+      <path d="M250 92 C290 40 340 42 360 78" fill="none" stroke="#e0a04a" stroke-width="2"/>
+      <polygon points="368,74 354,80 360,66" fill="#f7f3ea"/>
+      <polygon points="250,88 258,80 262,90" fill="#f7f3ea"/>
+      <polygon points="300,70 308,62 312,72" fill="#f7f3ea"/>
+      <polygon points="330,58 338,50 342,60" fill="#f7f3ea"/>
+      <text x="16" y="28" font-size="12" font-family="Sans" fill="#8a4e12">日照使空氣變暖</text>
+      <text x="230" y="22" font-size="12" font-family="Sans" fill="#1e4a3c">山谷裡的空氣往上，鳥群盤旋升高</text>
+      <text x="404" y="46" font-size="12" font-family="Sans" fill="#14342c">再越山稜</text>
+    </svg>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><div>山坡被太陽曬熱，附近的暖空氣可能上升。</div></div>
+    <div class="step"><div class="num">2</div><div>山谷和山稜會改變風向，也可能形成向上的氣流。</div></div>
+    <div class="step"><div class="num">3</div><div>鳥群在上升氣流裡盤旋，先取得高度。</div></div>
+    <div class="step"><div class="num">4</div><div>到了合適高度，再向下一段路滑翔或振翅前進。</div></div>
+  </div>
+  <p style="margin-top:2.6mm">觀察紀錄提到，鳥群常沿雲林樟湖一帶飛來，進入生毛樹溪山谷，藉氣流飛行並變換隊形。牠們不一定是停下來休息或覓食。隊形散開又聚合，可能和每隻鳥在氣流中的路徑有關。目前能說明的是：鳥群會利用山谷氣流。還不宜把每一次隊形變化，都解釋成有一位固定隊長在下指令。</p>
+  <p class="muted">大型群飛大約出現在 8 月下旬到 10 月中旬。風景區與地方介紹，常把白露前後到雙十節前後當成觀察窗口。數量和出現時間受天候、風向影響，不會每天都一樣。</p>
+  <div class="foot"><span>黃頭鷺科普 · 給國中</span><span>6</span></div>
+</section>
+
+<!-- 7 觀察 -->
+<section class="page">
+  <p class="kicker">06 · 看的時候</p>
+  <h2>兩種群飛，不要混在一起</h2>
+  <div class="grid2">
+    <div class="card" style="padding:3mm 3.4mm">
+      <span class="tag">季節性南遷</span>
+      <h3>秋天沿路往南</h3>
+      <p>鳥群持續往同一方向移動，或在山谷盤旋升高後越過山稜，然後離開。太興村看到的「萬鷺朝鳳」，主要是這一種。</p>
+    </div>
+    <div class="card" style="padding:3mm 3.4mm">
+      <span class="tag green">日常往返</span>
+      <h3>早晚進出夜棲地</h3>
+      <p>黃頭鷺本來就愛群居、集體夜棲。清晨、黃昏，牠們也會成群在覓食地和睡覺的樹林之間來去。這不一定是正在南遷。</p>
+    </div>
+  </div>
+  <p style="margin-top:3mm">成群飛，可能讓個體更容易跟上同伴，也一起使用同一段氣流。可是若沒有追蹤資料，就不要替某一群鳥編出「誰帶隊、誰決定方向」的故事。</p>
+  <div class="grid2">
+    <div>
+      <h3 style="font-size:12.5pt; margin-bottom:1.6mm">下次可以記這五項</h3>
+      <ul class="checks">
+        <li>日期是不是落在 8 月下旬到 10 月。</li>
+        <li>身體是全白，還是頭頸胸背帶橙黃。</li>
+        <li>是一直往同一方向，還是在山谷升高後越嶺。</li>
+        <li>是在附近來回，還是成批飛過、逐漸離開。</li>
+        <li>當天的風和地形。鳥況每天都可能不同。</li>
+      </ul>
+    </div>
+    <div class="warn">
+      <h3>友善，也守規定</h3>
+      <p>保持安靜，站在不妨礙居民的安全位置。不追鳥、不投食，也不要為了靠近而走進農田或私人地。</p>
+      <p>2026 年太興村這季，嘉義縣公告：9 月 11 日到 10 月 31 日，距地面約 122 公尺（400 呎）以下禁止無人機。違規可能被罰 3 萬到 15 萬元。</p>
+      <p style="margin:0">這是今年這季的規定。以後再去，先查民航局無人機系統或縣府最新公告。</p>
+    </div>
+  </div>
+  <div class="foot"><span>黃頭鷺科普 · 給國中</span><span>7</span></div>
+</section>
+
+<!-- 8 檢核 -->
+<section class="page">
+  <p class="kicker">07 · 想一想</p>
+  <h2>先自己答，再往下對</h2>
+  <div class="q"><b>1.</b> 黃頭鷺為什麼又叫牛背鷺？</div>
+  <div class="q"><b>2.</b> 非繁殖季的黃頭鷺，為什麼遠看很像白鷺鷥？</div>
+  <div class="q"><b>3.</b> 飛行時，怎樣用脖子分辨鷺和鶴？</div>
+  <div class="q"><b>4.</b> 「萬鷺朝鳳」是正式學名，還是地方對景象的稱呼？</div>
+  <div class="q"><b>5.</b> 看到山谷裡隊形一直在變，為什麼不宜說「一定有隊長在下令」？</div>
+  <div class="ans">
+    <p><b>1.</b> 因為牠常出現在牛附近，甚至站上牛背，等牛走路時驚起昆蟲。現在也常跟在耕耘機後面。</p>
+    <p><b>2.</b> 非繁殖季身體大致是白的。要再看嘴、腳、環境，以及有沒有橙黃繁殖羽。</p>
+    <p><b>3.</b> 鷺飛行時通常把脖子縮起來；鶴把脖子伸直。</p>
+    <p><b>4.</b> 是太興村一帶對秋季群飛景象的稱呼，和「鳳凰穴」的地方說法有關，不是正式學名。</p>
+    <p style="margin:0"><b>5.</b> 目前觀察能說明的是鳥群會利用山谷氣流。沒有追蹤每一隻鳥之前，不能斷定隊形變化等於有人在指揮。</p>
+  </div>
+  <h3 style="font-size:12pt; margin:3.2mm 0 1.4mm">一句話</h3>
+  <p class="call" style="margin-top:0">你看到的很可能是黃頭鷺的秋季南遷。牠們平時在草地、農田找蟲，秋天沿山線移動；太興的山谷氣流讓這段路更容易被人看見，於是有了「萬鷺朝鳳」。</p>
+  <h3 style="font-size:12pt; margin-bottom:1.2mm">資料與圖片</h3>
+  <ul class="src">
+    <li>農業知識入口網〈黃頭鷺〉：遷留型態、棲地與食性。kmweb.moa.gov.tw</li>
+    <li>嘉義縣政府 115 年 9 月 7 日府建道管字第 11502411191 號公告；交通部民航局遙控無人機管理資訊系統。</li>
+    <li>嘉義縣文化觀光局 2026 年說明：太興村黃頭鷺約於 8 月下旬至 10 月中旬南遷，並設臨時禁航。</li>
+    <li>封面群飛：Treysam，CC BY-SA 4.0。繁殖羽與頭部特徵見第 2 頁。飛行：ImagePerson，CC BY 4.0。牛旁：Giles Laurent，CC BY-SA 4.0。非繁殖季草地：Tisha Mukherjee，CC BY-SA 4.0。小白鷺：Alandmanson，CC BY-SA 4.0。剖面與比較圖為本教材繪製。</li>
+    <li>照片多攝於印度、塞浦路斯、法國、夏威夷、南非，用來說明種類特徵，不是太興村實景。分類名稱以農業部常用的 <i>Bubulcus ibis</i> 為主。</li>
+  </ul>
+  <div class="foot"><span>黃頭鷺科普 · 給國中</span><span>8</span></div>
+</section>
+
+</body>
+</html>
